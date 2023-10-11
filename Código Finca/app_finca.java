@@ -53,16 +53,54 @@ public class app_finca{
             JOptionPane.showMessageDialog(null, "No se encontraron registros");
         }else{
             JOptionPane.showMessageDialog(null, "Nombre: " + 
-           fincas[int_pos].getNombre() +"\n" + fincas[int_pos].getCodigo() + "\n" + 
-           fincas[int_pos].getExtension() + "\n" + fincas[int_pos].getPropietario() + "\n" + 
-           fincas[int_pos].getDireccion() + "\n" + fincas[int_pos].getUbicacion() + "\n" + 
-           fincas[int_pos].getProduccion() + "\n" + fincas[int_pos].getActividad());
+           fincas[int_pos].getNombre() +"\n" +  "Codigo: " + fincas[int_pos].getCodigo() + "\n" + 
+           "Extension: " + fincas[int_pos].getExtension() + "\n" + "Propietario: " + fincas[int_pos].getPropietario() + "\n" + 
+           "Dirección: " + fincas[int_pos].getDireccion() + "\n" + "Ubicación: " + fincas[int_pos].getUbicacion() + "\n" + 
+           "Producción: " + fincas[int_pos].getProduccion() + "\n" + "Actividad: " + fincas[int_pos].getActividad());
 
         }
     }
 
-    public static void fnt_actualizar(){
-
+    
+    private static    void fnt_actualizar(String codigo){
+        boolean bln_sw = false;
+        int int_pos = 0;
+        for(int i=0; i < int_posiciones; i++){
+            if(codigo.equals(fincas[i].getCodigo())){
+                bln_sw = true;
+                int_pos = i;
+                break;
+            }
+        }
+        if(bln_sw == false){
+            JOptionPane.showMessageDialog(null,"No se enctraron registros", "Actualizar", JOptionPane.ERROR_MESSAGE);
+        }else{
+            int op2 = Integer.parseInt(JOptionPane.showInputDialog(null, "<< MENU DE OPCIONES >>\n1. Nombre\n2. Propietario\n3. Dirección\n4. Ubicación\n5.Producción\n6. Actividad"));
+            if(op2 == 1){
+                String nombre = JOptionPane.showInputDialog(null,"Nuevo Nombre");
+                fincas[int_pos].setNombre(nombre);
+            }
+            if(op2 == 2){
+                String propietario = JOptionPane.showInputDialog(null,"Nuevo propiertario");
+                fincas[int_pos].setPropietario(propietario);
+            }
+            if(op2 == 3){
+                String direccion = JOptionPane.showInputDialog(null,"Nueva direccion");
+                fincas[int_pos].setDireccion(direccion);
+            }
+            if(op2 == 4){
+                String ubicacion = JOptionPane.showInputDialog(null,"Nueva ubicacion");
+                fincas[int_pos].setUbicacion(ubicacion);
+            }
+            if(op2 == 5){
+                String produccion = JOptionPane.showInputDialog(null,"Ingrese produccion");
+                fincas[int_pos].setProduccion(produccion);
+            }
+            if(op2 == 6){
+                String actividad = JOptionPane.showInputDialog(null,"Ingrese actividad");
+                fincas[int_pos].setActividad(actividad);
+            }
+    }
     }
     
     private static void fnt_selector(int opcion){
@@ -75,11 +113,15 @@ public class app_finca{
         }
 
         if (opcion == 3){
+            String cod = JOptionPane.showInputDialog(null, "Ingrese el codigo de la finca: ");
+            fnt_actualizar(cod);
 
         }
 
-        if (opcion == 4){
-            
+        if (opcion == 4){  
+
+            System.exit(0);
+        
         }
     }
 
