@@ -15,9 +15,7 @@ public class cls_registro_finca{
         this.str_codigo = codigo;
         this.flt_produccion = produccion;
         this.str_actividad = actividad;
-
-
-    }
+}
 
 
     //Getters

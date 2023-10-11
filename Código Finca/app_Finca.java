@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
 
-public class App_Finca{
-    static cls_Finca [] fincas = new cls_Finca[100];
-
+public class app_Finca{
+    static cls_registro_finca [] fincas = new cls_registro_finca[100];
+    static cls_parcelacion [] parcelas = new cls_parcelacion[100];
     static int int_posiciones = 0;
 
     public static void main(String[] args){
@@ -18,9 +18,16 @@ public class App_Finca{
         float produccion = Float.parseFloat(JOptionPane.showInputDialog(null, "Producción de la finca"));
         String actividad = JOptionPane.showInputDialog(null, "Actividad económica de la finca");
 
-        Fincas[int_posiciones] = new cls_Fincas
+        fincas[int_posiciones] = new cls_registro_finca(nombre, extension, propietario, direccion, ubicacion, codigo, produccion, actividad);
     }
 
+
+    public static void fnt_menu(boolean men){
+        while(men == true){
+
+            
+        }
+    }
     
 
 }
