@@ -19,6 +19,7 @@ public class app_finca{
         String produccion = JOptionPane.showInputDialog(null, "Producción de la finca");
         String actividad = JOptionPane.showInputDialog(null, "Actividad económica de la finca");
         fincas[int_posiciones] = new cls_registro_finca(nombre, extension, propietario, direccion, ubicacion, codigo, produccion, actividad);
+        int_posiciones ++;
 
         }
 
@@ -59,7 +60,9 @@ public class app_finca{
         }
     }
 
-    public static void fnt_actualizar()
+    public static void fnt_actualizar(){
+
+    }
     
     private static void fnt_selector(int opcion){
         if (opcion == 1){
