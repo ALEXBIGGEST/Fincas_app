@@ -3,6 +3,7 @@ import javax.swing.JOptionPane;
 public class app_finca{
     static cls_registro_finca [] fincas = new cls_registro_finca[100];
     static cls_parcelacion [] parcelas = new cls_parcelacion[100];
+    static cls_reporte [] reporte = new cls_reporte[100];
 
     static int int_posiciones = 0;
 
