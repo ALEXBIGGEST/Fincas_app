@@ -4,17 +4,17 @@ public class cls_parcelacion {
         private String str_nombre;
         private String str_codigoFinca;
         private int int_stock;
-        private float flt_produccion;
-        private float flt_ganancia;
+        private String str_produccion;
+        private String str_ganancia;
        
     
-        public cls_parcelacion(String cod, String nom, String codF, int stock, float prod, float ganancia) {
+        public cls_parcelacion(String cod, String nom, String codF, int stock, String prod, String ganancia) {
             this.str_codigo = cod;
             this.str_nombre = nom;
             this.str_codigoFinca = codF;
             this.int_stock = stock;
-            this.flt_produccion = prod;
-            this.flt_ganancia = ganancia;
+            this.str_produccion = prod;
+            this.str_ganancia = ganancia;
         }
         //seters
         public void setStock(int stock) { this.int_stock = stock; }
@@ -23,8 +23,8 @@ public class cls_parcelacion {
         public String getCodigoFinca() { return str_codigoFinca;}
         public String getCodigo() { return str_codigo; }
         public int getStock() { return int_stock; }
-        public float getGanancia(){ return flt_ganancia; }
-        public float getProduccion() { return flt_produccion; }
+        public String getGanancia(){ return str_ganancia; }
+        public String getProduccion() { return str_produccion; }
 
 
 }
