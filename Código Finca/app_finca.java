@@ -58,6 +58,8 @@ public class app_finca{
 
         }
     }
+
+    public static void fnt_actualizar()
     
     private static void fnt_selector(int opcion){
         if (opcion == 1){
