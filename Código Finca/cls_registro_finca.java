@@ -31,4 +31,14 @@ public class cls_registro_finca{
     public float getProduccion(){return flt_produccion;}
     public String getActividad(){return str_actividad;}
 
+    //Setters
+
+    public void setNombre(String nombre){this.str_nombre = nombre;}
+    public void setPropietario(String propietario){this.str_propietario = propietario;}
+    public void setDireccion(String direccion){this.str_direccion = direccion;}
+    public void setUbicacion(String ubicacion){this.str_ubicacion = ubicacion;}
+    public void setProduccion(float produccion){this.flt_produccion = produccion;}
+    public void setActividad(String actividad){this.str_actividad = actividad;}
+    
+
 }
